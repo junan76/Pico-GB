@@ -231,7 +231,7 @@ void core1_lcd_draw_line(const uint_fast8_t line)
 				[pixels_buffer[x] & 3];
 	}
 
-	mk_ili9225_set_x(line + 16);
+	mk_ili9225_set_x(175 - line - 16);
 	mk_ili9225_write_pixels(fb, LCD_WIDTH);
 	__atomic_store_n(&lcd_line_busy, 0, __ATOMIC_SEQ_CST);
 }

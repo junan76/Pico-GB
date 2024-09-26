@@ -1345,7 +1345,7 @@ static int compare_sprites(const void *in1, const void *in2)
 
 void __gb_draw_line(struct gb_s *gb)
 {
-	uint8_t pixels[160] = {0};
+	uint8_t pixels[LCD_WIDTH] = {0};
 
 	/* If LCD not initialised by front-end, don't render anything. */
 	if(gb->display.lcd_draw_line == NULL)
